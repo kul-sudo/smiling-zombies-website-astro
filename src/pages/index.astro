@@ -4,11 +4,11 @@ import NavbarItem from '../components/NavbarItem.astro';
 ---
 
 <Layout title="Smiling Zombies">
-  <main>
+  <nav>
     <div class="link-card-grid">
       <NavbarItem
-        href="https://docs.astro.build/"
-        title="Documentation"
+        href="https://github.com/kul-sudo/Smiling-Zombies"
+        title="Source Code"
       />
       <NavbarItem
         href="https://astro.build/integrations/"
@@ -23,20 +23,40 @@ import NavbarItem from '../components/NavbarItem.astro';
         title="Community"
       />
     </div>
-  </main>
+  </nav>
+
+  <h1 id="title">Smiling Zombies</h1>
 </Layout>
 
 <style>
-main {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-}
+  nav {
+    margin-top: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
 
-.link-card-grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-}
+  .link-card-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: repeat(1, 1fr);
+    -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr 1rem 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+#title {
+    font-size: 3rem;
+    margin-top: 3rem;
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+    text-align: center;
+  }
 </style>
