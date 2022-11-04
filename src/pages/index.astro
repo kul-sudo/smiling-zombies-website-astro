@@ -5,58 +5,158 @@ import NavbarItem from '../components/NavbarItem.astro';
 
 <Layout title="Smiling Zombies">
   <nav>
-    <div class="link-card-grid">
+    <div id="navbar-grid">
       <NavbarItem
         href="https://github.com/kul-sudo/Smiling-Zombies"
         title="Source Code"
       />
       <NavbarItem
-        href="https://astro.build/integrations/"
-        title="Integrations"
-      />
-      <NavbarItem
-        href="https://astro.build/themes/"
-        title="Themes"
-      />
-      <NavbarItem
-        href="https://astro.build/chat/"
-        title="Community"
+        href="https://github.com/kul-sudo/Smiling-Zombies/releases"
+        title="Download"
       />
     </div>
   </nav>
 
   <h1 id="title">Smiling Zombies</h1>
+  <div style={{ display: "flex", justifyContent: "center", marginTop: "3rem", userSelect: "none" }}>
+    <img
+      id="screenshot"
+      src="../public/screenshot.png"
+      draggable={false}
+      alt="descriptive text"
+    />
+  </div>
+  
+  <div style={{ display: "flex", justifyContent: "center" }}>
+    <a id="download-button" href="https://github.com/kul-sudo/Smiling-Zombies/releases" target="_blank"><span>Download</span></a>
+  </div>
 </Layout>
 
 <style>
-  nav {
-    margin-top: 2rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
+nav {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
 
-  .link-card-grid {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr;
-    grid-template-columns: repeat(1, 1fr);
-    -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr 1rem 1fr;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-  }
+#download-button {
+  width: 10rem;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  background-image: -o-linear-gradient(47deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  font-size: 2rem;
+  margin-top: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+#download-button span {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: white;
+  font-weight: 320;
+}
+
+#navbar-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1rem 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
 
 #title {
-    font-size: 3rem;
-    margin-top: 3rem;
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-    text-align: center;
+  font-size: 3rem;
+  margin-top: 3rem;
+  background-image: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400%;
+  background-position: 0%;
+  text-align: center;
+}
+
+@media all and (max-width: 605px) {
+  #navbar-grid {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
   }
+}
+
+#screenshot {
+  border-radius: 0.75rem;
+  width: 55rem;
+  height: auto;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+@media all and (max-width: 955px) {
+  #screenshot {
+    width: 50rem;
+    height: auto;
+  }
+}
+
+@media all and (max-width: 900px) {
+  #screenshot {
+    width: 45rem;
+    height: auto;
+  }
+}
+
+@media all and (max-width: 800px) {
+  #screenshot {
+    width: 35rem;
+    height: auto;
+  }
+}
+
+@media all and (max-width: 635px) {
+  #screenshot {
+    width: 30rem;
+    height: auto;
+  }
+}
+
+@media all and (max-width: 545px) {
+  #screenshot {
+    width: 28rem;
+    height: auto;
+  }
+}
+
+@media all and (max-width: 505px) {
+  #screenshot {
+    width: 25rem;
+    height: auto;
+  }
+}
+
+@media all and (max-width: 435px) {
+  #screenshot {
+    width: 23rem;
+    height: auto;
+  }
+}
+
+@media all and (max-width: 415px) {
+  #screenshot {
+    width: 20rem;
+    height: auto;
+  }
+}
 </style>
