@@ -16,7 +16,7 @@ const { href, title } = Astro.props;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0.1rem;
+  padding: 0.2rem;
   background-image: var(--accent-gradient);
   background-size: 400%;
   border-radius: 0.5rem;
@@ -29,9 +29,13 @@ const { href, title } = Astro.props;
 }
 
 #navbar-item > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   text-decoration: none;
-  padding: 0.8rem;
+  width: 6.5rem;
+  height: 3rem;
   border-radius: 0.35rem;
   color: #111;
   background-color: white;
